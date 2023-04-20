@@ -1,14 +1,14 @@
 package prototype
 
-type Cloneable interface {
-	clone() Cloneable
+type CloneAble interface {
+	clone() CloneAble
 }
 
 type computer struct {
 	serialNumber string
-	Cloneable
+	CloneAble
 }
 
-func (c *computer) clone() Cloneable {
+func (c *computer) clone() CloneAble {
 	return &computer{serialNumber: c.serialNumber}
 }
