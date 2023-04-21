@@ -11,7 +11,9 @@ type Reverser interface {
 }
 
 // StringReverser 字符串反转器
-type StringReverser struct{}
+type StringReverser struct {
+	Reverser
+}
 
 func (sr *StringReverser) reverse(str string) string {
 	var result []string
